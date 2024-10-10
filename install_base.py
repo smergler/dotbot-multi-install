@@ -64,7 +64,6 @@ class InstallBase(dotbot.Plugin):
             if self._check_if_installed(package):
                 self._log.lowinfo("%s is already installed" % package.name)
                 continue
-            self._log.lowinfo("installing %s" % package.name)
             if not self._install(package):
                 self._log.error("There was an issue installing {0}".format(package.name))
                 return False
